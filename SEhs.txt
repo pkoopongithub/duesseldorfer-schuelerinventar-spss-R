@@ -1,0 +1,215 @@
+DESCRIPTIVES
+    /VARIABLES= VAR037 VAR038 VAR039 VAR040 VAR041 VAR042.
+
+Valid cases = 74; cases with missing value(s) = 0.
++-------------------#--+-----+-------+-------+-------+
+|Variable           # N| Mean|Std Dev|Minimum|Maximum|
+#===================#==#=====#=======#=======#=======#
+|Arbeitsverhalten   #74|24,54|   5,28|  20,00|  37,00|
+|Lernverhalten      #74|24,22|   5,07|  20,00|  37,00|
+|Sozialverhalten    #74|20,41|   5,20|  16,00|  32,00|
+|Fachkompetenz      #74|18,51|   3,66|  15,00|  30,00|
+|Personale Kompetenz#74|34,28|   7,37|  28,00|  53,00|
+|Methodenkompetenz  #74|19,28|   4,06|  16,00|  31,00|
++-------------------#--+-----+-------+-------+-------+
+
+CORRELATION
+	/VARIABLES =  VAR037 VAR038 VAR039 VAR040 VAR041 VAR042
+	/PRINT = TWOTAIL SIG.
+
+Correlations
+#=============================#================#=============#===============#
+#                             #Arbeitsverhalten|Lernverhalten|Sozialverhalten|
+#                             #                |             |               |
+#-----------------+-----------#----------------+-------------+---------------+
+#Arbeitsverhalten |Pearson    #            1,00|          ,94|            ,85|
+#                 |Correlation#                |             |               |
+#                 |Sig. (2-   #                |          ,00|            ,00|
+#                 |tailed)    #                |             |               |
+#                 |N          #              74|           74|             74|
+#-----------------+-----------#----------------+-------------+---------------+
+#Lernverhalten    |Pearson    #             ,94|         1,00|            ,89|
+#                 |Correlation#                |             |               |
+#                 |Sig. (2-   #             ,00|             |            ,00|
+#                 |tailed)    #                |             |               |
+#                 |N          #              74|           74|             74|
+#-----------------+-----------#----------------+-------------+---------------+
+#Sozialverhalten  |Pearson    #             ,85|          ,89|           1,00|
+#                 |Correlation#                |             |               |
+#                 |Sig. (2-   #             ,00|          ,00|               |
+#                 |tailed)    #                |             |               |
+#                 |N          #              74|           74|             74|
+#-----------------+-----------#----------------+-------------+---------------+
+#Fachkompetenz    |Pearson    #             ,74|          ,70|            ,76|
+#                 |Correlation#                |             |               |
+#                 |Sig. (2-   #             ,00|          ,00|            ,00|
+#                 |tailed)    #                |             |               |
+#                 |N          #              74|           74|             74|
+#-----------------+-----------#----------------+-------------+---------------+
+#Personale        |Pearson    #             ,96|          ,98|            ,88|
+#Kompetenz        |Correlation#                |             |               |
+#                 |Sig. (2-   #             ,00|          ,00|            ,00|
+#                 |tailed)    #                |             |               |
+#                 |N          #              74|           74|             74|
+#-----------------+-----------#----------------+-------------+---------------+
+#Methodenkompetenz|Pearson    #             ,96|          ,92|            ,86|
+#                 |Correlation#                |             |               |
+#                 |Sig. (2-   #             ,00|          ,00|            ,00|
+#                 |tailed)    #                |             |               |
+#                 |N          #              74|           74|             74|
+#=================#===========#================#=============#===============#
+
+#=============================#=============#=========#=================#
+#                             #Fachkompetenz|Personale|Methodenkompetenz#
+#                             #             |Kompetenz|                 #
+#-----------------+-----------#-------------+---------+-----------------#
+#Arbeitsverhalten |Pearson    #          ,74|      ,96|              ,96#
+#                 |Correlation#             |         |                 #
+#                 |Sig. (2-   #          ,00|      ,00|              ,00#
+#                 |tailed)    #             |         |                 #
+#                 |N          #           74|       74|               74#
+#-----------------+-----------#-------------+---------+-----------------#
+#Lernverhalten    |Pearson    #          ,70|      ,98|              ,92#
+#                 |Correlation#             |         |                 #
+#                 |Sig. (2-   #          ,00|      ,00|              ,00#
+#                 |tailed)    #             |         |                 #
+#                 |N          #           74|       74|               74#
+#-----------------+-----------#-------------+---------+-----------------#
+#Sozialverhalten  |Pearson    #          ,76|      ,88|              ,86#
+#                 |Correlation#             |         |                 #
+#                 |Sig. (2-   #          ,00|      ,00|              ,00#
+#                 |tailed)    #             |         |                 #
+#                 |N          #           74|       74|               74#
+#-----------------+-----------#-------------+---------+-----------------#
+#Fachkompetenz    |Pearson    #         1,00|      ,71|              ,73#
+#                 |Correlation#             |         |                 #
+#                 |Sig. (2-   #             |      ,00|              ,00#
+#                 |tailed)    #             |         |                 #
+#                 |N          #           74|       74|               74#
+#-----------------+-----------#-------------+---------+-----------------#
+#Personale        |Pearson    #          ,71|     1,00|              ,91#
+#Kompetenz        |Correlation#             |         |                 #
+#                 |Sig. (2-   #          ,00|         |              ,00#
+#                 |tailed)    #             |         |                 #
+#                 |N          #           74|       74|               74#
+#-----------------+-----------#-------------+---------+-----------------#
+#Methodenkompetenz|Pearson    #          ,73|      ,91|             1,00#
+#                 |Correlation#             |         |                 #
+#                 |Sig. (2-   #          ,00|      ,00|                 #
+#                 |tailed)    #             |         |                 #
+#                 |N          #           74|       74|               74#
+#=================#===========#=============#=========#=================#
+
+RELIABILITY
+	/VARIABLES= VAR043 VAR044 VAR045 VAR046 VAR047 VAR048 VAR049 VAR050 VAR051
+VAR052 VAR053 VAR054
+	/MODEL=SPLIT (6).
+
+Scale: ANY
+
+Case Processing Summary
+#==============#==#======#
+#              # N|   %  #
+#==============#==#======#
+#Cases Valid   #74|100,00#
+#      Excluded# 0|   ,00#
+#      Total   #74|100,00#
+#==============#==#======#
+
+Reliability Statistics
+#==========================================================#===#
+#Cronbach's Alpha               Part 1           Value     #,94#
+#                                                N of Items#  6#
+#                               Part 2           Value     #,94#
+#                                                N of Items#  6#
+#                               Total N of Items           # 12#
+#Correlation Between Forms                                 #,96#
+#                                                          #   #
+
+#                                                          #   #
+#Spearman-Brown Coefficient     Equal Length               #,98#
+#                               Unequal Length             #,98#
+#Guttman Split-Half Coefficient                            #,97#
+#==========================================================#===#
+
+T-TEST
+	PAIRS =  VAR043 VAR044 VAR045 VAR046 VAR047 VAR048 WITH  VAR049 VAR050 VAR051
+VAR052 VAR053 VAR054 (PAIRED)
+	/MISSING=ANALYSIS
+	/CRITERIA=CIN(0.95).
+
+Paired Sample Statistics
+#==========================#=====#==#==============#=========#
+#                          # Mean| N|Std. Deviation|S.E. Mean#
+#==========================#=====#==#==============#=========#
+#Pair 0Arbeitsverhalten1   #12,09|74|          2,61|      ,30#
+#      Arbeitsverhalten2   #12,45|74|          2,85|      ,33#
+#Pair 1Lernverhalten1      #11,84|74|          2,57|      ,30#
+#      Lernverhalten2      #12,38|74|          2,78|      ,32#
+#Pair 2Sozialverhalten1    #10,72|74|          3,03|      ,35#
+#      Sozialverhalten2    #14,18|74|          3,08|      ,36#
+#Pair 3Fachkompetenz1      # 9,05|74|          1,89|      ,22#
+#      Fachkompetenz2      # 9,46|74|          2,10|      ,24#
+#Pair 4Personale Kompetenz1#12,66|74|          2,96|      ,34#
+#      Personale Kompetenz2#21,91|74|          4,70|      ,55#
+#Pair 5Methodenkompetenz1  # 9,43|74|          2,16|      ,25#
+#      Methodenkompetenz2  # 9,65|74|          2,12|      ,25#
+#==========================#=====#==#==============#=========#
+
+Paired Samples Correlations
+#======#===========================================#==#===========#====#
+#      |                                           # N|Correlation|Sig.#
+#======#===========================================#==#===========#====#
+#Pair 0|Arbeitsverhalten1 & Arbeitsverhalten2      #74|        ,88| ,00#
+#Pair 1|Lernverhalten1 & Lernverhalten2            #74|        ,80| ,00#
+#Pair 2|Sozialverhalten1 & Sozialverhalten2        #74|        ,80| ,00#
+#Pair 3|Fachkompetenz1 & Fachkompetenz2            #74|        ,68| ,00#
+#Pair 4|Personale Kompetenz1 & Personale Kompetenz2#74|        ,92| ,00#
+#Pair 5|Methodenkompetenz1 & Methodenkompetenz2    #74|        ,64| ,00#
+#======#===========================================#==#===========#====#
+
+Paired Samples Test
+#=======================#===================================#======#==#=======#
+#                       #         Paired Differences        |      |  |       #
+#                       #-----+---------+------+------------+      |  |       #
+#                       #     |         |      |     95%    |      |  |       #
+#                       #     |         |      | Confidence |      |  |       #
+#                       #     |         |      | Interval of|      |  |       #
+#                       #     |         |      |     the    |      |  |       #
+#                       #     |         |      | Difference |      |  |       #
+#                       #     |         |      +-----+------+      |  |       #
+#                       # Mean|   Std.  | Std. |Lower| Upper|   t  |df|  Sig. #
+#                       #     |Deviation| Error|     |      |      |  |  (2-  #
+#                       #     |         | Mean |     |      |      |  |tailed)#
+#=======================#=====#=========#======#=====#======#======#==#=======#
+#PairArbeitsverhalten1 -# -,35|     1,38|   ,16| -,67|  -,03| -2,19|73|    ,03#
+#0   Arbeitsverhalten2  #     |         |      |     |      |      |  |       #
+#PairLernverhalten1 -   # -,54|     1,71|   ,20| -,94|  -,14| -2,71|73|    ,01#
+#1   Lernverhalten2     #     |         |      |     |      |      |  |       #
+#PairSozialverhalten1 - #-3,46|     1,91|   ,22|-3,90| -3,02|-15,58|73|    ,00#
+#2   Sozialverhalten2   #     |         |      |     |      |      |  |       #
+#PairFachkompetenz1 -   # -,41|     1,60|   ,19| -,78|  -,03| -2,17|73|    ,03#
+#3   Fachkompetenz2     #     |         |      |     |      |      |  |       #
+#                       #     |         |      |     |      |      |  |       #
+
+#=======================#===================================#======#==#=======#
+#                       #         Paired Differences        |      |  |       #
+#                       #-----+---------+------+------------+      |  |       #
+#                       #     |         |      |     95%    |      |  |       #
+#                       #     |         |      | Confidence |      |  |       #
+#                       #     |         |      | Interval of|      |  |       #
+#                       #     |         |      |     the    |      |  |       #
+#                       #     |         |      | Difference |      |  |       #
+#                       #     |         |      +-----+------+      |  |       #
+#                       # Mean|   Std.  | Std. |Lower| Upper|   t  |df|  Sig. #
+#                       #     |Deviation| Error|     |      |      |  |  (2-  #
+#                       #     |         | Mean |     |      |      |  |tailed)#
+#=======================#=====#=========#======#=====#======#======#==#=======#
+#PairPersonale          #-9,24|     2,29|   ,27|-9,77| -8,71|-34,78|73|    ,00#
+#4   Kompetenz1 -       #     |         |      |     |      |      |  |       #
+#    Personale          #     |         |      |     |      |      |  |       #
+#    Kompetenz2         #     |         |      |     |      |      |  |       #
+#PairMethodenkompetenz1 # -,22|     1,81|   ,21| -,64|   ,20| -1,03|73|    ,31#
+#5   -                  #     |         |      |     |      |      |  |       #
+#    Methodenkompetenz2 #     |         |      |     |      |      |  |       #
+#=======================#=====#=========#======#=====#======#======#==#=======#
